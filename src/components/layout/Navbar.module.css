@@ -1,0 +1,117 @@
+body {
+    margin: 0px
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    padding: 1em;
+    height: 32.89px;
+    margin: 0px;
+    box-shadow: 0px 1.64444px 8.22222px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    position: absolute;
+    width: 145px;
+    height: 25px;
+    margin-left: 55px;
+}
+
+/* NAVBAR LIST */
+
+.list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    padding-left: 250px;
+    gap: 20px;
+}
+
+.item {
+    margin-right: 1em;
+}
+
+.item a {
+    color:#101928;
+    text-decoration: none;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+.item a:hover {
+    letter-spacing: 0.8px;
+    color:#20936D;
+    box-shadow: 0px 5px 40px -10px rgba(32, 147, 109, 1);
+}
+
+/* NAVBAR BUTTONS */
+
+.nav_buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;    
+    margin-right: 50px;
+}
+
+
+.login_button {
+    width: 150px;
+    height: 40px;
+    box-sizing: border-box;
+    background-color:#fff;
+    border: 1px solid #20936D;
+    border-radius: 10px;
+    cursor: pointer;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    line-height: 22px;
+    color: #20936D;    
+    transition: all 0.4s ease 0s;
+}
+
+.login_button:hover {
+    letter-spacing: 0.8px;
+    box-shadow: 0px 5px 40px -10px rgba(32, 147, 109, 1);
+}
+
+.signup_button {
+    width: 150px;
+    height: 40px;
+    background: #20936D;
+    border: #20936D;
+    border-radius: 10px;
+    cursor: pointer;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: #ffffff;
+    transition: all 0.4s ease 0s;  
+}
+
+.signup_button:hover {
+    letter-spacing: 0.8px;
+    box-shadow: 0px 5px 40px -10px rgba(32, 147, 109, 1);
+}
+
+.signup_button a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+}
+
+.login_button a{
+    text-decoration: none;
+    color: #20936D; 
+}
