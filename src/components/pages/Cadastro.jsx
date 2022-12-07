@@ -1,7 +1,7 @@
 import styles from './Cadastro.module.css'
 import {Link} from 'react-router-dom'
 import { useState } from 'react'
-import axios from 'axios'
+import axios from '../../axios/index'
 
 const Cadastro = () => {
     const [nome, setNome] = useState('');
@@ -9,17 +9,19 @@ const Cadastro = () => {
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
 
-    const handleRegister = async (e) => {
-        e.preventDefault();
-        setNome('');
-        setTelefone('');
-        setEmail('');
-        setSenha('');
-    }
-
-    axios.get('http://localhost:3000').then((response) => {
-		console.log(response)
-	});
+    async function handleRegister(e) {
+        try {
+          e.preventDefault();
+          await axios.post('/register', {
+            nome: nome,
+            email: email,
+            telefone: telefone,
+            senha: senha,
+          });
+        } catch (error) {
+          throw new Error(`${error}`);
+        }
+      }
 
     return (
     
