@@ -1,21 +1,24 @@
 import styles from './Login.module.css'
 import {Link} from 'react-router-dom'
 import { useState } from 'react'
-import axios from 'axios'
+import axios from '../../axios/index'
 
 const Login = () => {
+
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
 
-    const handleLogin = async (e) => {
-        e.preventDefault();
-        setEmail('');
-        setSenha('');
-    }
-
-    axios.get('http://localhost:3000').then((response) => {
-		console.log(response)
-	});
+    async function handleLogin(e) {
+        try {
+          e.preventDefault();
+          await axios.post('/register', {
+            email: email,
+            senha: senha,
+          });
+        } catch (error) {
+          throw new Error(`${error}`);
+        }
+      }
 
     return (
 
